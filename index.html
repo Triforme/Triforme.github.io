@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<meta charset="UTF-8">
+<title>Ciapar & Magnar</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Amatic SC", sans-serif
+    }
+
+    .w3-top {
+        display: flex;
+        justify-content: space-between;
+        /* Spazia gli elementi della barra */
+        align-items: center;
+        /* Allinea verticalmente al centro */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 10px;
+        /* Per spazio interno */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Sfondo semitrasparente */
+    }
+
+    .language-switch {
+        font-size: 28px;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-left: auto;
+        /* Sposta a destra */
+        margin-right: 0;
+        box-shadow: none;
+        /* Rimuove il rilievo */
+        text-shadow: none;
+    }
+
+    .w3-display-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .w3-content {
+        width: 100%;
+        padding: 0;
+    }
+</style>
+
+<body> <!-- Start Content -->
+    <div id="home" class="w3-content"> <!-- Navbar -->
+        <div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min"> <a href="#home"
+                class="w3-bar-item w3-button">HOME</a> <a href="menu.html" class="w3-bar-item w3-button">MENU</a> <a
+                href="about.html" class="w3-bar-item w3-button">ABOUT</a> <a href="contact.html"
+                class="w3-bar-item w3-button">CONTACT</a> <button class="w3-button w3-black language-switch"
+                onclick="toggleLanguage()">EN/IT</button> </div> <!-- Header image -->
+        <div style="background-image:url('carbo.jpg');background-size:cover"
+            class="w3-display-container w3-grayscale-min">
+            <div class="w3-display-bottomleft"> <span class="w3-tag w3-xlarge" id="hours">Open from 10am to 12pm</span>
+            </div>
+            <div class="w3-display-middle w3-center"> <span class="w3-text-black" id="title"
+                    style="font-size:100px">CIAPAR<br>E MAGNAR</span>
+                <p><a href="menu.html" class="w3-button w3-xxlarge w3-black" id="menu-link">Let me see the menu</a></p>
+            </div>
+        </div> <!-- End Content -->
+    </div>
+    <script> let currentLanguage = 'EN'; function toggleLanguage() { if (currentLanguage === 'EN') { document.getElementById('hours').innerText = 'Aperto dalle 10 alle 24'; document.getElementById('title').innerHTML = 'CIAPAR<br>E MAGNAR'; document.getElementById('menu-link').innerText = 'Fammi vedere il menu'; currentLanguage = 'IT'; } else { document.getElementById('hours').innerText = 'Open from 10am to 12pm'; document.getElementById('title').innerHTML = 'CIAPAR<br>E MAGNAR'; document.getElementById('menu-link').innerText = 'Let me see the menu'; currentLanguage = 'EN'; } } </script>
+</body>
+
+</html>
