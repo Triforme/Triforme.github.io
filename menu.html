@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-<style> 
-body, h1, h2, h3, h4, h5, h6 { 
-    font-family: "Amatic SC", sans-serif; 
-    font-size: 22px; 
+<style>
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 22px;
 }
 
 .language-switch {
@@ -18,24 +18,22 @@ body, h1, h2, h3, h4, h5, h6 {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    /* Rimuovo il bevel */
-    box-shadow: none; 
+    box-shadow: none;
     text-shadow: none;
-    /* Sposta il pulsante a destra, mantenendolo centrato verticalmente */
     margin-left: auto;
     margin-right: 0;
 }
 
 .w3-top {
     display: flex;
-    justify-content: space-between; /* Distribuisce gli altri elementi */
-    align-items: center; /* Allinea verticalmente gli elementi al centro */
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
-    padding: 10px; /* Aggiungi padding per dare spazio */
+    padding: 10px;
 }
 
 .w3-content {
@@ -85,6 +83,16 @@ ul {
 .menu-item-name {
     font-size: 1.9em;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-item-price {
+    font-size: 1.4em;
+    color: #333;
+    margin-left: 10px;
+    font-weight: normal;
 }
 
 .menu-item-ingredients {
@@ -104,10 +112,13 @@ ul {
     }
 
     .w3-top {
-        font-size: 18px; /* Riduce il font della barra */
+        font-size: 18px;
+    }
+
+    .menu-item-price {
+        font-size: 1.2em;
     }
 }
-
 
 @media (max-width: 768px) {
     h1 {
@@ -169,7 +180,10 @@ ul {
     <div class="menu-item">
         <img src="aglio.jpg" alt="Pasta ajo, olio, peperoncino e acciughe">
         <div class="menu-item-description">
-            <div class="menu-item-name">Pasta ajo, olio, peperoncino e acciughe</div>
+            <div class="menu-item-name">
+                Pasta ajo, olio, peperoncino e acciughe
+                <span class="menu-item-price">€10.50</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients1">Aglio, olio d'oliva, peperoncino, acciughe, prezzemolo</div>
         </div>
     </div>
@@ -177,7 +191,10 @@ ul {
     <div class="menu-item">
         <img src="carbo2.jpg" alt="Carbonara">
         <div class="menu-item-description">
-            <div class="menu-item-name">Carbonara</div>
+            <div class="menu-item-name">
+                Carbonara
+                <span class="menu-item-price">€12.00</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients2">Guanciale, tuorlo d'uovo, pecorino, pepe nero</div>
         </div>
     </div>
@@ -185,7 +202,10 @@ ul {
     <div class="menu-item">
         <img src="amatriciana.jpg" alt="Pasta all'amatriciana">
         <div class="menu-item-description">
-            <div class="menu-item-name">Pasta all'amatriciana</div>
+            <div class="menu-item-name">
+                Pasta all'amatriciana
+                <span class="menu-item-price">€11.50</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients3">Guanciale, pomodoro, pecorino, pepe nero</div>
         </div>
     </div>
@@ -193,7 +213,10 @@ ul {
     <div class="menu-item">
         <img src="gricia.jpg" alt="Pasta alla gricia">
         <div class="menu-item-description">
-            <div class="menu-item-name">Pasta alla gricia</div>
+            <div class="menu-item-name">
+                Pasta alla gricia
+                <span class="menu-item-price">€11.00</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients4">Guanciale, pecorino, pepe nero</div>
         </div>
     </div>
@@ -201,7 +224,10 @@ ul {
     <div class="menu-item">
         <img src="killer.jpeg" alt="Pasta all'assassina">
         <div class="menu-item-description">
-            <div class="menu-item-name">Pasta all'assassina</div>
+            <div class="menu-item-name">
+                Pasta all'assassina
+                <span class="menu-item-price">€10.50</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients5">Pomodoro, peperoncino, aglio, olio d'oliva</div>
         </div>
     </div>
@@ -209,7 +235,10 @@ ul {
     <div class="menu-item">
         <img src="scoglio.jpg" alt="Pasta allo scoglio">
         <div class="menu-item-description">
-            <div class="menu-item-name">Pasta allo scoglio</div>
+            <div class="menu-item-name">
+                Pasta allo scoglio
+                <span class="menu-item-price">€15.00</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients6">Frutti di mare, aglio, olio d'oliva, prezzemolo, pomodoro</div>
         </div>
     </div>
@@ -217,7 +246,10 @@ ul {
     <div class="menu-item">
         <img src="puttanesca.jpg" alt="Pasta alla puttanesca">
         <div class="menu-item-description">
-            <div class="menu-item-name">Pasta alla puttanesca</div>
+            <div class="menu-item-name">
+                Pasta alla puttanesca
+                <span class="menu-item-price">€12.00</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients7">Pomodoro, olive nere, capperi, acciughe, peperoncino, aglio</div>
         </div>
     </div>
@@ -225,7 +257,10 @@ ul {
     <div class="menu-item">
         <img src="cacio.jpg" alt="Cacio e pepe">
         <div class="menu-item-description">
-            <div class="menu-item-name">Mezze cacio e pepe</div>
+            <div class="menu-item-name">
+                Mezze maniche cacio e pepe
+                <span class="menu-item-price">€10.00</span>
+            </div>
             <div class="menu-item-ingredients" id="ingredients8">Pecorino, pepe nero, pasta</div>
         </div>
     </div>
@@ -270,3 +305,4 @@ function toggleLanguage() {
 
 </body>
 </html>
+
